@@ -4,7 +4,7 @@ This is a fork of https://github.com/dujianyi/ardFFT
 
 ArduinoFastFFT is a readable FFT code with simple comments. Everyone with C knowledge should be able to read it and modify it.
 
-ArduinoFastFFT increases performance of ardFFT by precalculating a 2D array of needed sines and cosines.
+ArduinoFastFFT increases performance of ardFFT by precalculating a 2D array of needed sinus and cosinus.
 
 ## Usage
 `calculateFFT(Xr, Xi, re, im, N, 0, 1)`

@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include <myFFT.h>
 #define mic_adc 1 // Pin # of the ADC
-#define N 512    // Sampling point
+#define N 256    // Sampling point
 #define Fs 3000 // Sampling Frequency
 
 // global variables
@@ -11,6 +11,8 @@ void setup(){
   Serial.begin(115200);
   analogReadResolution(10);
   // pinMode(pin_adc, INPUT);
+  // Prepare tables to increase performance
+  prepareTables(N);
 }
 
 // Sampling process
@@ -56,6 +58,8 @@ void loop(){
     preMax = postProcessing(Xr, Xi, preMax);
     Serial.println(preMax);
   }
+  // Cleanup tables 
+  // void cleanupTables();
 }
 
 
